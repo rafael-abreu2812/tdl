@@ -11,8 +11,7 @@ addTaskBtn.addEventListener("click", () => {
     if(task && task.trim() !== ""){
         //vai criar uma nova tarefa na lista
         const li = document.createElement("li");
-        li.textContent = task;
-
+        
         //cria a caixinha (checkbox)
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
