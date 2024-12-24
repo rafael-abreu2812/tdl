@@ -39,7 +39,7 @@ taskInput.addEventListener("keydown", (event) => {
                  completedList.appendChild(li);
                 } else {
                     li.style.textDecoration = "none";
-                    completedList.appendChild(li);  // se a task não esta como concluida, não adiciona/remove o risco do texto e remove da lista "tarefas concluidas"
+                    taskList.appendChild(li);  // se a task não esta como concluida, não adiciona/remove o risco do texto e remove da lista "tarefas concluidas"
                 }
 
                 
