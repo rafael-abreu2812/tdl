@@ -63,4 +63,89 @@ body {
       margin-top: -2px;
       margin-left: -10px;
 }
+
+.sidebar-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+  }
+
+
+ /* Estilo do botão para abrir o menu */
+.sidebar-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+  }
   
+  /* Estilo da sidebar */
+  .sidebar {
+      height: calc(100% - 187px); /* Altura da sidebar */
+      width: 0; /* Largura inicial (fechada) */
+      position: fixed; /* Fixa na tela */
+      top: 60px;
+      right: 0;
+      background-color: rgb(138, 138, 207);
+      overflow-x: hidden; /* Esconde conteúdo transbordado horizontalmente */
+      transition: 0.5s; /* Animação para abrir e fechar */
+      padding-top: 60px; /* Espaço no topo */
+      z-index: 999; /* Sobrepõe outros elementos */
+  }
+  
+  /* Conteúdo interno da sidebar */
+  .sidebar h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .sidebar ul li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+  }
+  
+  
+  /* Abre a sidebar */
+  .sidebar.open {
+      width: 300px; /* Largura quando aberta */
+  }
+
+
+footer {
+      background-color: rgb(95, 95, 204);
+      text-align: center;
+      padding: 10px;
+      bottom: 0;
+      width: 100%;
+      position: fixed;
+      color: white;
+}
+
+
+footer .footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+
+}

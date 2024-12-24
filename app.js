@@ -34,10 +34,35 @@ taskInput.addEventListener("keydown", (event) => {
 
             //evento de marcar caixinha e desmarcar
             checkbox.addEventListener("change", () => {
-                //aplicar style de riscar as tasks aqui
+                if (checkbox.checked) {
+                 li.style.textDecoration = "line-through"; // adiciona risco ao marcar a task como concluida e move para seção "Tarefas Concluidas"
+                 completedList.appendChild(li);
+                } else {
+                    li.style.textDecoration = "none";
+                    completedList.appendChild(li);  // se a task não esta como concluida, não adiciona/remove o risco do texto e remove da lista "tarefas concluidas"
+                }
+
+                
             })
         } else {
             alert("Digite uma tarefa válida!");
         }
     }
+    
 });
+
+// elementos da sidebar
+const openSidebar = document.getElementById("openSidebar");
+const closeSidebar = document.getElementById("closeSidebar");
+const sidebar = document.getElementById("sidebar");
+const completedList = document.getElementById("completedList");
+
+// abre e fecha sidebar
+openSidebar.addEventListener("click", () => {
+    if (sidebar.classList.contains("open")) {
+        sidebar.classList.remove("open"); // fecha sidebar se aberta
+    } else {
+        sidebar.classList.add("open"); // abre sidebar se fechada
+    }
+});
+
