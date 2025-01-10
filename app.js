@@ -19,13 +19,21 @@ taskInput.addEventListener("keydown", (event) => {
             //cria a caixinha (checkbox)
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
+            checkbox.id = `task-${Date.now()}`;
+
+
+            const label = document.createElement("label");
+            label.setAttribute("for", checkbox.id);
+            label.textContent = task;
+        
 
             //texto da tarefa e prazo
             const taskText = document.createTextNode(`${task}` - Prazo: ${deadline || "Sem prazo definido"}); 
 
             //adicionar caixinha e texto dentro do item da lista
             li.appendChild(checkbox);
-            li.appendChild(taskText);
+            li.appendChild(label);
+            
 
             //vai adicionar a tarefa criada á lista
             taskList.appendChild(li);

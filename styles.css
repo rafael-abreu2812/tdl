@@ -149,3 +149,56 @@ footer .footer-content p {
     font-size: 14px;
 
 }
+
+
+
+/* -----------------CSS do checkbox------------------ */
+
+/* Oculta o checkbox padrão */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo personalizado do checkbox */
+input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* Adiciona um quadrado estilizado como o checkbox */
+input[type="checkbox"] + label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid rgb(95, 95, 204);
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Mostra o "check" dentro da caixa quando marcado */
+input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 20px; /* Ajuste a posição */
+    top: 0px;  /* Ajuste a posição */
+    font-size: 25px;
+    color: black;
+
+}
+
+/* Efeito hover */
+input[type="checkbox"] + label:hover {
+    background-color: rgb(224, 224, 255);
+    transform: scale(1.02);
+}
