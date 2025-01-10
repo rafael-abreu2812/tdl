@@ -9,6 +9,7 @@ taskInput.addEventListener("keydown", (event) => {
 
         //pegar o valor digitado no campo de entrada
         const task = taskInput.value;
+        const deadline = document.getElementById("taskDeadline").value; //Pega a data prazo escolhida
 
         //verificando se algo foi digitado
         if (task && task.trim() !== "") {
@@ -19,8 +20,8 @@ taskInput.addEventListener("keydown", (event) => {
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
 
-            //texto da tarefa para controlar separadamente da caixinha
-            const taskText = document.createTextNode(" " + task); //espaço pra separar a caixinha da task
+            //texto da tarefa e prazo
+            const taskText = document.createTextNode(`${task}` - Prazo: ${deadline || "Sem prazo definido"}); 
 
             //adicionar caixinha e texto dentro do item da lista
             li.appendChild(checkbox);
@@ -31,6 +32,7 @@ taskInput.addEventListener("keydown", (event) => {
 
             //limpar o campo de entrada após adicionar uma tarefa
             taskInput.value = "";
+            document.getElementById("taskDeadline").value = ""; // Limpa o campo de data
 
             //evento de marcar caixinha e desmarcar
             checkbox.addEventListener("change", () => {
