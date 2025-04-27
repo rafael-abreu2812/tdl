@@ -55,7 +55,7 @@ taskInput.addEventListener("keydown", (event) => {
                 
             })
         } else {
-            alert("Digite uma tarefa válida!");
+            alert("Digite uma tarefa válida, por favor!");
         }
     }
     
